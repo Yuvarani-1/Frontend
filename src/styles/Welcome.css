@@ -1,0 +1,67 @@
+.welcome-container {
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Roboto', sans-serif; /* Optional: Add a custom font */
+    color: #fff; /* Light text color */
+    background-color: #282c34; /* Darker gray background */
+    min-height: 100vh; /* Full height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+  }
+  
+  .welcome-title {
+    font-size: 2.5em; /* Increased title size */
+    color: #61dafb; /* Light blue color for title */
+  }
+  
+  .welcome-paragraph {
+    font-size: 1.2em;
+    color: #ccc; /* Adjust the paragraph color for better visibility */
+    margin: 10px 0;
+  }
+  
+  .welcome-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #007bff; /* Button background color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .welcome-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+  }
+  
+  .welcome-register-link {
+    font-size: 1em;
+    color: #61dafb; /* Light blue color for the link */
+    text-decoration: none;
+  }
+  
+  .welcome-register-link:hover {
+    text-decoration: underline; /* Underline on hover */
+  }
+  
+  /* Loader Styles */
+  .loader {
+    border: 8px solid #f3f3f3; /* Light gray */
+    border-top: 8px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite; /* Spin animation */
+    margin: 20px; /* Space above */
+  }
+  
+  /* Keyframes for the spinning loader */
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  

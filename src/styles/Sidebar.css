@@ -1,0 +1,58 @@
+.sidebar {
+    width: 200px;
+    height: 100vh;
+    background-color: #1e1e2f; /* Dark background color */
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    color: #fff; /* Light text color */
+    font-family: 'Roboto', sans-serif; /* Elegant font */
+  }
+  
+  .sidebar h2 {
+    color: #ff6b6b; /* Highlight color for the title */
+    font-size: 1.5em;
+    text-align: center;
+    border-bottom: 1px solid #ff6b6b; /* Underline effect */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .sidebar-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar-list li {
+    margin: 10px 0;
+    display: flex; /* Ensures icon and text are aligned */
+    align-items: center;
+  }
+  
+  .sidebar-list li a {
+    text-decoration: none; /* Remove underline from links */
+    color: #d1d1e9; /* Soft light color */
+    display: flex; /* Make link a flex container */
+    align-items: center; /* Center the icon and text vertically */
+    padding: 10px;
+    width: 100%; /* Ensures the hover background covers the full width */
+    border-radius: 8px; /* Rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    position: relative; /* Position relative for better control */
+  }
+  
+  .sidebar-list li a .icon {
+    margin-right: 10px; /* Space between icon and text */
+    font-size: 1.2em; /* Adjust icon size */
+  }
+  
+  .sidebar-list li a:hover {
+    background-color: #ff6b6b; /* Hover effect background */
+    color: #fff; /* Change text color on hover */
+    transform: translateX(5px); /* Slide effect when hovered */
+  }
+  
+  .sidebar-list li a:active {
+    background-color: #d9455f; /* Active link background */
+  }
+  

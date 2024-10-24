@@ -1,0 +1,104 @@
+/* Dashboard.css */
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    display: flex; /* Use flexbox for layout */
+    height: 100vh; /* Full height of the viewport */
+    font-family: 'Arial', sans-serif; /* Modern sans-serif font */
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px; /* Fixed width for sidebar */
+    background-color: #34495e; /* Darker blue-grey for sidebar */
+    color: #ecf0f1; /* Light text for contrast */
+    padding: 20px; /* Padding inside sidebar */
+    position: fixed; /* Fix sidebar on the left */
+    height: 100%; /* Full height of the container */
+    overflow-y: auto; /* Allow scrolling if content exceeds height */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Sidebar Links */
+.sidebar a {
+    display: block; /* Block display for links */
+    color: #ecf0f1; /* Link text color */
+    padding: 10px; /* Padding for links */
+    text-decoration: none; /* Remove underline from links */
+    border-radius: 5px; /* Rounded corners for links */
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.sidebar a:hover {
+    background-color: #2c3e50; /* Darker shade on hover */
+}
+
+/* Dashboard Content */
+.dashboard-content {
+    margin-left: 250px; /* Leave space for the sidebar */
+    padding: 20px; /* Padding around the content */
+    background-color: #f9f9f9; /* Very light grey for content area */
+    flex-grow: 1; /* Allow content area to grow */
+    height: 100vh; /* Full height of the container */
+    overflow-y: auto; /* Allow scrolling if content exceeds height */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); /* Inner shadow for depth */
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* Headings */
+h1 {
+    font-size: 28px; /* Main heading font size */
+    margin-bottom: 15px; /* Space below heading */
+    color: #311b8b; /* Darker color for headings */
+}
+
+/* Paragraphs */
+p {
+    font-size: 16px; /* Font size for paragraphs */
+    margin-bottom: 15px; /* Space below paragraphs */
+    line-height: 1.6; /* Improved line height for readability */
+    color: #1fa2ac; /* Darker grey color for paragraphs */
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px; /* Padding for buttons */
+    background-color: #3498db; /* Button background color */
+    color: #ffffff; /* White text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
+}
+
+button:hover {
+    background-color: #2980b9; /* Darker shade on hover */
+    transform: translateY(-1px); /* Slight lift effect */
+}
+
+/* Cards */
+.card {
+    background-color: #ffffff; /* White for card backgrounds */
+    border-radius: 8px; /* Rounded corners for cards */
+    padding: 20px; /* Padding inside cards */
+    margin-bottom: 20px; /* Space below cards */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for cards */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px; /* Adjust sidebar width for smaller screens */
+    }
+
+    .dashboard-content {
+        margin-left: 200px; /* Adjust content margin for smaller screens */
+    }
+}
