@@ -1,0 +1,54 @@
+/* ChatComponent.css */
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    width: 300px; /* Set a width for the chat */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.chat-box {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto; /* Allow scrolling */
+    max-height: 400px; /* Set a max height */
+}
+
+.message {
+    margin: 5px 0;
+}
+
+.timestamp {
+    font-size: 0.8em;
+    color: gray;
+    margin-right: 5px;
+}
+
+.chat-input {
+    display: flex;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+}
+
+.chat-input button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+}
+
+.chat-input button:hover {
+    background-color: #218838; /* Darken button on hover */
+}

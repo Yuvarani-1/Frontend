@@ -1,0 +1,59 @@
+/* UserSummary.css */
+.user-summary {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column; /* Arrange user summary content vertically */
+  width: 300px; /* Fixed width for consistency */
+}
+
+.summary-box {
+  background-color: #f2f0ef; /* Light background for summary box */
+  border: 1px solid #d1d5db; /* Light gray border */
+  border-radius: 10px; /* Rounded corners */
+  padding: 15px; /* Padding inside the box */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s; /* Transition for hover effect */
+  font-family: 'Arial', sans-serif;
+   /* Set a modern font */
+  color:#a96f6f;
+  text-align: center;
+}
+
+.summary-box:hover {
+  transform: scale(1.03); /* Slightly scale up on hover */
+}
+
+.loading {
+  color: darkcyan; /* Dark cyan color for loading message */
+  font-size: 18px; /* Font size */
+  margin-bottom: 10px; /* Space below loading message */
+}
+
+.error-message {
+  color: #d9534f; /* Bootstrap danger color for error messages */
+  font-weight: bold; /* Bold font for emphasis */
+  margin-bottom: 10px; /* Space below error message */
+}
+
+.summary-details {
+  list-style: none; /* Remove bullet points */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
+
+.summary-item {
+  background-color: #f8f8cf; /* Light gray background for summary items */
+  margin: 8px 0; /* Space between summary items */
+  padding: 10px; /* Padding for summary items */
+  border-radius: 6px; /* Slightly rounded corners */
+  transition: background-color 0.3s, transform 0.2s; /* Transition for hover effect */
+  font-family: 'Roboto', sans-serif; /* Set the same font for consistency */
+  font-size: 16px; /* Font size */
+  color: darkcyan; /* Dark cyan color for text */
+  font-weight: bold; /* Bold font for emphasis */
+}
+
+.summary-item:hover {
+  background-color: #e9ecef; /* Darker gray on hover */
+  transform: translateY(-2px); /* Slight lift on hover */
+}

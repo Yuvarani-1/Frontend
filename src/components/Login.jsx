@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { loginUser, setAuthentication } from '../features/authSlice'; // Adjust based on your project structure
+import { loginUser, setAuthentication } from '../features/authSlice';
 import axios from 'axios';
-import Cookies from 'js-cookie'; // Make sure to install js-cookie for cookie handling
-import { useNavigate } from 'react-router-dom'; // Import useNavigate for redirection
-import '../styles/Login.css'; // Import the CSS file
+import Cookies from 'js-cookie'; 
+import { useNavigate, Link } from 'react-router-dom'; // Import Link for navigation
+import '../styles/Login.css';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -20,9 +20,12 @@ const Login = () => {
     e.preventDefault();
     try {
       const response = await dispatch(loginUser({ email, password })).unwrap();
-      const token = response.token; // Replace this with your actual token response path
-      Cookies.set('jwt', token, { expires: 7 }); // Store JWT token in cookies for 7 days
-      console.log('JWT token:', token); // Debugging token
+      console.log('Login response',response);
+      const token = response.token; 
+      // Replace this with your actual token response path
+      Cookies.set('jwt', token, { expires: 1/24,path : '/' }); // Store JWT token in cookies
+      console.log('JWT token:', token);
+      console.log('Token set in cookies:', token);  // Debugging token
       setIsOtpSent(true); // OTP has been sent
     } catch (error) {
       console.error("Login failed:", error);
@@ -82,6 +85,10 @@ const Login = () => {
           <button type="submit" disabled={loading}>
             {loading ? 'Logging in...' : 'Login'}
           </button>
+          {/* Add Forgot Password Link */}
+          <div className="additional-links">
+            <Link to="/forgot-password">Forgot Password?</Link>
+          </div>
         </form>
       ) : (
         <form onSubmit={handleOtpSubmit}>
@@ -91,6 +98,7 @@ const Login = () => {
               type="text"
               value={otp}
               onChange={(e) => setOtp(e.target.value)}
+              placeholder="Enter OTP"
               required
             />
           </div>

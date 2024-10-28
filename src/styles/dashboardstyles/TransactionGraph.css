@@ -1,0 +1,32 @@
+/* TransactionGraph.css */
+
+.transaction-graph {
+    max-width: 1420px; /* Limit the width of the graph */
+    margin: 20px auto; /* Center the graph horizontally with some margin */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners for the container */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background-color: #f9f9f9; /* Light background color */
+  }
+  
+  .transaction-graph h2 {
+    text-align: center; /* Center the title */
+    font-size: 24px; /* Adjust font size */
+    color: #333; /* Dark color for the title */
+  }
+  
+  .transaction-graph select {
+    display: block; /* Make dropdown a block element */
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding for better touch targets */
+    margin: 10px 0; /* Vertical margin */
+    border: 1px solid #ccc; /* Border styling */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+  }
+  
+  .transaction-graph .chart-container {
+    position: relative; /* For positioning the chart */
+    height: 400px; /* Set a fixed height for the chart */
+  }
+  

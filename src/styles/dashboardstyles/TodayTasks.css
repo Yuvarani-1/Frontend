@@ -1,0 +1,55 @@
+.today-tasks {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column; /* Arrange tasks vertically */
+}
+
+.tasks-box {
+    background-color: #f2f0ef; /* White background for tasks box */
+    border: 1px solid #d1d5db; /* Light gray border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 15px; /* Padding inside the box */
+    width: 300px; /* Fixed width */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* More prominent shadow */
+    transition: transform 0.3s; /* Transition for hover effect */
+    font-family: 'Arial', sans-serif; /* Set a modern font */
+}
+
+.tasks-box:hover {
+    transform: scale(1.03); /* Slightly scale up on hover */
+}
+
+.date-box {
+    background-color: #dfb79a; /* Blue background */
+    color: rgb(255, 255, 255); /* White text */
+    padding: 10px; /* Padding inside the box */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 20px; /* Increased font size */
+    text-align: center; /* Center text */
+    margin-bottom: 15px; /* Space between date and tasks */
+    font-weight: bold; /* Bold font for emphasis */
+}
+
+.task-list {
+    list-style: none; /* Remove bullet points */
+    padding: 0px; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+.task-item {
+    background-color: #f8f8cf; /* Light gray background for tasks */
+    margin: 8px 0; /* Space between tasks */
+    padding: 10px; /* Padding for task items */
+    border-radius: 6px; /* Slightly rounded corners */
+    transition: background-color 0.3s, transform 0.2s; /* Transition for hover effect */
+    font-family: 'Roboto', sans-serif; /* Set the same font for consistency */
+    font-size: 16px; /* Font size */
+    color:darkcyan;
+    font-weight: bold;
+
+}
+
+.task-item:hover {
+    background-color: #e9ecef; /* Darker gray on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+}

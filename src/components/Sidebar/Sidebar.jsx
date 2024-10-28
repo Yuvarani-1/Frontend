@@ -1,22 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/Sidebar.css'; // Import the CSS file
-
-// Import Font Awesome components
+import '../../styles/Sidebar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { 
-  faUser, 
-  faCog, 
-  faTachometerAlt, 
-  faUsers, 
-  faChartBar, 
-  faFileAlt, 
-  faSignOutAlt 
+import {
+  faUser,
+  faCog,
+  faTachometerAlt,
+  faUsers,
+  faChartBar,
+  faFileAlt,
+  faSignOutAlt,
+  faQuestionCircle,
 } from '@fortawesome/free-solid-svg-icons';
 
-const Sidebar = () => {
+const Sidebar = ({ isOpen }) => {
   return (
-    <div className="sidebar">
+    <div className={`sidebar`}>
       <h2>Admin Menu</h2>
       <ul className="sidebar-list">
         <li>
@@ -49,12 +48,21 @@ const Sidebar = () => {
             <FontAwesomeIcon icon={faFileAlt} className="icon" /> Reports
           </Link>
         </li>
-        <li>
-          <Link to="/logout">
-            <FontAwesomeIcon icon={faSignOutAlt} className="icon" /> Logout
-          </Link>
-        </li>
       </ul>
+      <div className="sidebar-bottom">
+        <ul className="sidebar-list">
+          <li>
+            <Link to="/help" className="sidebar-help">
+              <FontAwesomeIcon icon={faQuestionCircle} className="icon" /> Help
+            </Link>
+          </li>
+          <li>
+            <Link to="/logout">
+              <FontAwesomeIcon icon={faSignOutAlt} className="icon" /> Logout
+            </Link>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 };

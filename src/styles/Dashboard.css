@@ -1,4 +1,3 @@
-/* Dashboard.css */
 
 /* Basic Reset */
 * {
@@ -7,6 +6,37 @@
     box-sizing: border-box;
 }
 
+/* DashboardLayout.css */
+.dashboard-container {
+    display: flex; /* Flexbox layout for horizontal alignment */
+  }
+  
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px; /* Adjust as needed */
+    height: 100vh; /* Full height */
+    background-color: #1e1e2f; /* Dark background */
+    color: white; /* Text color */
+    padding: 20px; /* Padding for the sidebar */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); /* Optional shadow */
+    transition: transfrom 0.3s ease;
+  }
+  
+  /*.sidebar.closed{
+    transform: translateX(-100%); 
+  }*/
+
+  .sidebar.open {
+    transform: translateX(0); /* Show sidebar */
+}
+  .main-content {
+    margin-left: 250px; /* Space for the sidebar */
+    padding: 20px; /* Padding for main content */
+    flex-grow: 1; /* Allow main content to grow */
+  }
+  
 /* Dashboard Container */
 .dashboard-container {
     display: flex; /* Use flexbox for layout */
@@ -14,31 +44,6 @@
     font-family: 'Arial', sans-serif; /* Modern sans-serif font */
 }
 
-/* Sidebar Styles */
-.sidebar {
-    width: 250px; /* Fixed width for sidebar */
-    background-color: #34495e; /* Darker blue-grey for sidebar */
-    color: #ecf0f1; /* Light text for contrast */
-    padding: 20px; /* Padding inside sidebar */
-    position: fixed; /* Fix sidebar on the left */
-    height: 100%; /* Full height of the container */
-    overflow-y: auto; /* Allow scrolling if content exceeds height */
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-}
-
-/* Sidebar Links */
-.sidebar a {
-    display: block; /* Block display for links */
-    color: #ecf0f1; /* Link text color */
-    padding: 10px; /* Padding for links */
-    text-decoration: none; /* Remove underline from links */
-    border-radius: 5px; /* Rounded corners for links */
-    transition: background-color 0.3s; /* Smooth background transition */
-}
-
-.sidebar a:hover {
-    background-color: #2c3e50; /* Darker shade on hover */
-}
 
 /* Dashboard Content */
 .dashboard-content {
